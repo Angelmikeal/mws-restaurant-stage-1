@@ -47,6 +47,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   flex-wrap: wrap;
 }
 #footer {
+  width: 100%;
   background-color: #444;
   color: #aaa;
   font-size: 8pt;
@@ -54,6 +55,12 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   padding: 25px;
   text-align: center;
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+}
+
+#footer a {
+  margin: 0px 15px;
 }
 /* ====================== Navigation ====================== */
 nav {
@@ -105,11 +112,20 @@ nav h1 a {
     text-decoration: underline;
 }
 /* ====================== Map ====================== */
+#map-container {
+  width: 100%;
+}
+
 #map {
   height: 400px;
   width: 100%;
   background-color: #ccc;
 }
+
+.leaflet-control-attribution {
+  display: none;
+}
+
 /* ====================== Restaurant Filtering ====================== */
 .filter-container {
   display: flex;
@@ -141,3 +157,62 @@ nav h1 a {
   padding: 0 10px;
   width: 200px;
 }
+
+/* ====================== Restaurant Listing ====================== */
+#restaurants-list {
+  width: 100%;
+  display: flex;
+  background-color: #f3f3f3;
+  list-style: outside none none;
+  margin: 0;
+  padding: 30px 15px 60px;
+  text-align: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+#restaurants-list li {
+  width: 20%;
+  min-width: 280px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  font-family: Arial,sans-serif;
+  margin: 15px;
+  min-height: 380px;
+  padding: 0px 0px 30px;
+  text-align: center;
+}
+#restaurants-list .restaurant-img {
+  background-color: #ccc;
+  display: block;
+  margin: 0;
+  max-width: 100%;
+  min-height: 248px;
+  min-width: 100%;
+}
+#restaurants-list li h1 {
+  color: #f18200;
+  font-family: Arial,sans-serif;
+  font-size: 15pt;
+  font-weight: 200;
+  letter-spacing: 0;
+  line-height: 1.3;
+  margin: 20px 0 10px;
+  text-transform: uppercase;
+}
+#restaurants-list p {
+  margin: 0;
+  font-size: 11pt;
+}
+#restaurants-list li a {
+  background-color: orange;
+  border-bottom: 3px solid #eee;
+  color: #fff;
+  display: inline-block;
+  font-size: 10pt;
+  margin: 15px 0 0;
+  padding: 8px 30px 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
